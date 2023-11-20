@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject explosionPrefab;
+    public GameObject Shield;
     public float playerSpeed;
     private float horizontalScreenLimit = 10f;
     private float verticalScreenLimit = 4f;
@@ -52,8 +53,9 @@ public class Player : MonoBehaviour
             Instantiate(bulletPrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
     }
+    
 
-    public void LoseLife()
+   public void LoseLife()
     {
         lives--;
         livesText.text = "Lives:" + lives;
@@ -66,6 +68,7 @@ public class Player : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
-       
-   }
+      }
 }
+   
+

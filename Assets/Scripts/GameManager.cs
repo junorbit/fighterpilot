@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
       Instantiate(coinPrefab, new Vector3(Random.Range(-8,8), 7.5f, 0), Quaternion.identity);
     }
     
+
+    
     public void GameOver()
     {
         CancelInvoke();
